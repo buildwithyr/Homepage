@@ -78,12 +78,27 @@ function openLightbox(index) {
 function renderLightboxItem() {
   const item = galleryItems[currentIndex];
   if (!item) return;
-  const clone = item.querySelector('.gallery-placeholder').cloneNode(true);
-  // Remove inner overlay opacity so it's always visible in lightbox
-  const overlay = clone.querySelector('.gallery-overlay');
-  if (overlay) overlay.style.opacity = '1';
+  const srcImg = item.querySelector('img');
+  const label  = item.querySelector('.gallery-label');
   lightboxContent.innerHTML = '';
-  lightboxContent.appendChild(clone);
+  if (srcImg) {
+    const img = document.createElement('img');
+    img.src = srcImg.src;
+    img.alt = srcImg.alt;
+    img.style.cssText = 'max-width:90vw;max-height:85vh;border-radius:12px;display:block;object-fit:contain;';
+    lightboxContent.appendChild(img);
+    if (label) {
+      const cap = document.createElement('p');
+      cap.textContent = label.textContent;
+      cap.style.cssText = 'text-align:center;margin-top:14px;font-size:14px;color:rgba(255,255,255,0.6);';
+      lightboxContent.appendChild(cap);
+    }
+  } else {
+    const clone = item.querySelector('.gallery-placeholder').cloneNode(true);
+    const overlay = clone.querySelector('.gallery-overlay');
+    if (overlay) overlay.style.opacity = '1';
+    lightboxContent.appendChild(clone);
+  }
 }
 
 function closeLightbox() {

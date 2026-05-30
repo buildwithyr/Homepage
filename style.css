@@ -417,7 +417,21 @@ ul { list-style: none; }
   display: flex;
   align-items: flex-end;
   padding: 16px;
+  overflow: hidden;
   transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.gallery-placeholder img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.gallery-item:hover .gallery-placeholder img {
+  transform: scale(1.05);
 }
 
 .gallery-item:hover .gallery-placeholder { transform: scale(1.02); }
