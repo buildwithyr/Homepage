@@ -171,7 +171,7 @@ button { background: none; border: none; cursor: pointer; font-family: inherit; 
    ========================================== */
 .hero {
   position: relative;
-  height: 220svh;
+  height: 150svh;
   background: var(--bg);
 }
 
@@ -679,7 +679,7 @@ button { background: none; border: none; cursor: pointer; font-family: inherit; 
   .nav-links { display: none; }
   .nav-hamburger { display: flex; }
 
-  .section { padding: 72px 0; }
+  .section { padding: 56px 0; }
   .section-title { margin-bottom: 32px; }
 
   /* Mobile: Bild bündig oben. Bildhöhe ≈ 111.5vw (1188×1324) →
