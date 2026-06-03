@@ -21,6 +21,8 @@
         <a href="#about">Über mich</a>
         <a href="#interests">Interessen</a>
         <a href="#gallery">Galerie</a>
+        <a href="#oskar">Oskar</a>
+        <a href="#drone-video">Drohne</a>
         <a href="#faq">FAQ</a>
       </div>
       <button class="nav-hamburger" id="hamburger" aria-label="Menü öffnen">
@@ -31,21 +33,20 @@
       <a href="#about" class="nav-mobile-link">Über mich</a>
       <a href="#interests" class="nav-mobile-link">Interessen</a>
       <a href="#gallery" class="nav-mobile-link">Galerie</a>
+      <a href="#oskar" class="nav-mobile-link">Oskar</a>
+      <a href="#drone-video" class="nav-mobile-link">Drohne</a>
       <a href="#faq" class="nav-mobile-link">FAQ</a>
     </div>
   </nav>
 
   <!-- HERO -->
   <section class="hero" id="hero">
-    <div class="hero-bg"></div>
+    <div class="hero-bg-img"></div>
+    <div class="hero-gradient"></div>
     <div class="hero-content reveal">
-      <!-- PLATZHALTER: Ersetze durch dein Profilfoto – <img src="assets/profile.jpg" class="hero-avatar-img" alt="Yannick"> -->
-      <div class="hero-avatar">
-        <div class="hero-avatar-placeholder">Y</div>
-      </div>
       <h1 class="hero-name">Hey, ich bin<br><span class="hero-name-highlight">Yannick.</span></h1>
       <p class="hero-sub">Technik-Enthusiast, App-Entwickler und Drohnenpilot aus Österreich. Wenn ich nicht gerade an Projekten arbeite, bin ich mit Oskar unterwegs.</p>
-      <a href="#about" class="hero-cta">Mehr über mich</a>
+      <a href="#about" class="hero-cta">Mehr erfahren</a>
     </div>
     <div class="hero-scroll-hint">
       <div class="hero-scroll-line"></div>
@@ -55,28 +56,40 @@
   <!-- ABOUT -->
   <section class="section" id="about">
     <div class="container">
-      <div class="section-label reveal">Über mich</div>
-      <h2 class="section-title reveal">Ein paar Fakten.</h2>
-      <div class="about-grid">
-        <div class="about-card reveal">
-          <div class="about-card-icon">📍</div>
-          <div class="about-card-label">Heimat</div>
-          <div class="about-card-value">Österreich</div>
+      <div class="about-layout">
+        <div class="about-left">
+          <div class="section-label reveal">Über mich</div>
+          <h2 class="section-title reveal">Ein paar Fakten.</h2>
+          <div class="about-grid">
+            <div class="about-card reveal">
+              <div class="about-card-icon">📍</div>
+              <div class="about-card-label">Heimat</div>
+              <div class="about-card-value">Österreich</div>
+            </div>
+            <div class="about-card reveal">
+              <div class="about-card-icon">💻</div>
+              <div class="about-card-label">Beschäftigung</div>
+              <div class="about-card-value">App-Entwicklung</div>
+            </div>
+            <div class="about-card reveal">
+              <div class="about-card-icon">🐕</div>
+              <div class="about-card-label">Bester Freund</div>
+              <div class="about-card-value">Oskar</div>
+            </div>
+            <div class="about-card reveal">
+              <div class="about-card-icon">🚁</div>
+              <div class="about-card-label">Hobby</div>
+              <div class="about-card-value">Drohnenfotografie</div>
+            </div>
+          </div>
         </div>
-        <div class="about-card reveal">
-          <div class="about-card-icon">💻</div>
-          <div class="about-card-label">Beschäftigung</div>
-          <div class="about-card-value">App-Entwicklung &amp; Technik</div>
-        </div>
-        <div class="about-card reveal">
-          <div class="about-card-icon">🐕</div>
-          <div class="about-card-label">Bester Freund</div>
-          <div class="about-card-value">Oskar</div>
-        </div>
-        <div class="about-card reveal">
-          <div class="about-card-icon">🚁</div>
-          <div class="about-card-label">Hobby</div>
-          <div class="about-card-value">Drohnenfotografie</div>
+        <div class="about-right reveal">
+          <img
+            src="assets/Oskar_und_ich.JPEG"
+            alt="Yannick und Oskar, aufgenommen aus der Froschperspektive"
+            class="about-img"
+            loading="lazy"
+          >
         </div>
       </div>
     </div>
@@ -129,66 +142,51 @@
       <h2 class="section-title reveal">Galerie.</h2>
       <div class="gallery-tabs reveal">
         <button class="gallery-tab active" data-filter="all">Alle</button>
-        <button class="gallery-tab" data-filter="drone">Drohne</button>
-        <button class="gallery-tab" data-filter="oskar">Oskar</button>
         <button class="gallery-tab" data-filter="personal">Persönlich</button>
+        <button class="gallery-tab" data-filter="drone">Drohne</button>
       </div>
     </div>
-    <div class="gallery-track-wrap">
+    <div class="gallery-track-wrap" id="galleryWrap">
       <div class="gallery-track" id="galleryTrack">
 
-        <!-- PLATZHALTER: Drohnenfotos – ersetze durch echte Fotos (kommen später) -->
-        <div class="gallery-item gallery-placeholder" data-category="drone">
-          <div class="gallery-placeholder-inner">
-            <span class="gallery-placeholder-icon">🚁</span>
-            <span class="gallery-placeholder-text">Drohnenfoto<br><small>Platzhalter</small></span>
-          </div>
+        <!-- Persönlich -->
+        <div class="gallery-item" data-category="personal">
+          <img src="assets/ICH.JPEG" alt="Dunkles Portrait" loading="lazy">
+          <div class="gallery-item-overlay"><span>Portrait</span></div>
         </div>
-        <div class="gallery-item gallery-placeholder" data-category="drone">
-          <div class="gallery-placeholder-inner">
-            <span class="gallery-placeholder-icon">🏔️</span>
-            <span class="gallery-placeholder-text">Drohnenfoto<br><small>Platzhalter</small></span>
-          </div>
-        </div>
-        <div class="gallery-item gallery-placeholder" data-category="drone">
-          <div class="gallery-placeholder-inner">
-            <span class="gallery-placeholder-icon">🌄</span>
-            <span class="gallery-placeholder-text">Drohnenfoto<br><small>Platzhalter</small></span>
-          </div>
+        <div class="gallery-item" data-category="personal">
+          <img src="assets/Oskar_und_ich2.JPEG" alt="Yannick und Oskar beim Essen auf der Hütte" loading="lazy">
+          <div class="gallery-item-overlay"><span>Hütteneinkehr</span></div>
         </div>
 
-        <!-- PLATZHALTER: Oskar-Fotos – ersetze durch echte Fotos -->
-        <div class="gallery-item gallery-placeholder" data-category="oskar">
-          <div class="gallery-placeholder-inner">
-            <span class="gallery-placeholder-icon">🐾</span>
-            <span class="gallery-placeholder-text">Oskar Foto<br><small>Platzhalter</small></span>
-          </div>
+        <!-- Drohne -->
+        <div class="gallery-item" data-category="drone">
+          <img src="old%20images/hohewand-01.jpg" alt="Hohe Wand aus der Luft" loading="lazy">
+          <div class="gallery-item-overlay"><span>Hohe Wand</span></div>
         </div>
-        <div class="gallery-item gallery-placeholder" data-category="oskar">
-          <div class="gallery-placeholder-inner">
-            <span class="gallery-placeholder-icon">🐕</span>
-            <span class="gallery-placeholder-text">Oskar Foto<br><small>Platzhalter</small></span>
-          </div>
+        <div class="gallery-item" data-category="drone">
+          <img src="old%20images/hohewand-02.jpg" alt="Berge im Morgenrot" loading="lazy">
+          <div class="gallery-item-overlay"><span>Morgenrot</span></div>
         </div>
-        <div class="gallery-item gallery-placeholder" data-category="oskar">
-          <div class="gallery-placeholder-inner">
-            <span class="gallery-placeholder-icon">🌿</span>
-            <span class="gallery-placeholder-text">Oskar &amp; Natur<br><small>Platzhalter</small></span>
-          </div>
+        <div class="gallery-item" data-category="drone">
+          <img src="old%20images/waldherbst.jpg" alt="Herbstwald von oben" loading="lazy">
+          <div class="gallery-item-overlay"><span>Herbstwald</span></div>
         </div>
-
-        <!-- PLATZHALTER: Persönliche Fotos – ersetze durch echte Fotos -->
-        <div class="gallery-item gallery-placeholder" data-category="personal">
-          <div class="gallery-placeholder-inner">
-            <span class="gallery-placeholder-icon">👤</span>
-            <span class="gallery-placeholder-text">Persönliches Foto<br><small>Platzhalter</small></span>
-          </div>
+        <div class="gallery-item" data-category="drone">
+          <img src="old%20images/burgforchtenstein.jpg" alt="Burg Forchtenstein" loading="lazy">
+          <div class="gallery-item-overlay"><span>Burg Forchtenstein</span></div>
         </div>
-        <div class="gallery-item gallery-placeholder" data-category="personal">
-          <div class="gallery-placeholder-inner">
-            <span class="gallery-placeholder-icon">📸</span>
-            <span class="gallery-placeholder-text">Persönliches Foto<br><small>Platzhalter</small></span>
-          </div>
+        <div class="gallery-item" data-category="drone">
+          <img src="old%20images/strasse-von-oben.jpg" alt="Straße von oben" loading="lazy">
+          <div class="gallery-item-overlay"><span>Vogelperspektive</span></div>
+        </div>
+        <div class="gallery-item" data-category="drone">
+          <img src="old%20images/wings.jpg" alt="Wings" loading="lazy">
+          <div class="gallery-item-overlay"><span>Wings</span></div>
+        </div>
+        <div class="gallery-item" data-category="drone">
+          <img src="old%20images/winter-01.jpg" alt="Winterlandschaft" loading="lazy">
+          <div class="gallery-item-overlay"><span>Winter</span></div>
         </div>
 
       </div>
@@ -201,6 +199,80 @@
       <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Weiter">›</button>
       <img class="lightbox-img" id="lightboxImg" src="" alt="">
       <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </section>
+
+  <!-- OSKAR -->
+  <section class="section section-alt oskar-section" id="oskar">
+    <div class="container">
+      <div class="section-label reveal">Der eigentliche Star</div>
+      <h2 class="section-title reveal">Oskar.</h2>
+      <p class="oskar-intro reveal">Mein täglicher Spaziergangspartner und vermutlich der eigentliche Star dieser Website.</p>
+    </div>
+
+    <div class="oskar-hero-wrap reveal">
+      <img
+        src="assets/Oskar.JPEG"
+        alt="Oskar beim Sonnenuntergang auf einer Straße"
+        class="oskar-hero-img"
+        loading="lazy"
+      >
+      <div class="oskar-hero-overlay">
+        <span class="oskar-hero-label">Jack Russell Terrier</span>
+      </div>
+    </div>
+
+    <div class="gallery-track-wrap" id="oskarWrap">
+      <div class="gallery-track oskar-track" id="oskarTrack">
+
+        <div class="gallery-item oskar-item" data-lightbox="oskar">
+          <img src="assets/Oskar_01.JPEG" alt="Oskar auf der Wiese zwischen Pusteblumen" loading="lazy">
+          <div class="gallery-item-overlay"><span>Pusteblumenwiese</span></div>
+        </div>
+        <div class="gallery-item oskar-item" data-lightbox="oskar">
+          <img src="assets/Oskar_02.JPEG" alt="Oskar fliegt durch die Luft" loading="lazy">
+          <div class="gallery-item-overlay"><span>Abheben</span></div>
+        </div>
+        <div class="gallery-item oskar-item" data-lightbox="oskar">
+          <img src="assets/Oskar_03.JPEG" alt="Oskar mit Blick in die Ferne" loading="lazy">
+          <div class="gallery-item-overlay"><span>Weitblick</span></div>
+        </div>
+        <div class="gallery-item oskar-item" data-lightbox="oskar">
+          <img src="assets/Oskar_04.JPEG" alt="Oskar im Laufschritt" loading="lazy">
+          <div class="gallery-item-overlay"><span>In Action</span></div>
+        </div>
+        <div class="gallery-item oskar-item" data-lightbox="oskar">
+          <img src="assets/Oskar_und_ich.JPEG" alt="Yannick und Oskar aus der Froschperspektive" loading="lazy">
+          <div class="gallery-item-overlay"><span>Froschperspektive</span></div>
+        </div>
+        <div class="gallery-item oskar-item" data-lightbox="oskar">
+          <img src="assets/Oskar_und_ich2.JPEG" alt="Hütteneinkehr zu zweit" loading="lazy">
+          <div class="gallery-item-overlay"><span>Hütteneinkehr</span></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DROHNENAUFNAHMEN -->
+  <section class="section drone-video-section" id="drone-video">
+    <div class="container">
+      <div class="section-label reveal">Aus der Vogelperspektive</div>
+      <h2 class="section-title reveal">Drohnenaufnahmen.</h2>
+      <div class="video-wrap reveal">
+        <div class="video-facade" id="videoFacade" role="button" tabindex="0" aria-label="Video abspielen">
+          <img
+            class="video-thumb"
+            src="https://i.ytimg.com/vi/Q7wlRB4WaYM/maxresdefault.jpg"
+            alt="Drohnenvideo Vorschau"
+            loading="lazy"
+          >
+          <div class="video-overlay"></div>
+          <div class="video-play">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -281,7 +353,6 @@
       <div class="footer-inner">
         <div class="footer-name">Yannick</div>
         <div class="footer-links">
-          <!-- PLATZHALTER: Instagram-Benutzernamen anpassen -->
           <a class="footer-link" href="https://www.instagram.com/yannickreiter/" target="_blank" rel="noopener" aria-label="Yannicks Instagram">
             <svg class="footer-ig-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/></svg>
             Yannick
