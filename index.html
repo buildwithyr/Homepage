@@ -1,478 +1,314 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Professionelle Drohnenaufnahmen für Immobilien, Unternehmen und besondere Momente. Luftaufnahmen in höchster Qualität.">
-<meta name="keywords" content="Drohnenfotografie, Drohnenvideo, Luftaufnahmen, Immobilien, Drohne, Aerial Photography">
-<meta name="author" content="Drohnen Fotografie">
-<meta property="og:title" content="Drohnen Fotografie – Perspektiven, die begeistern">
-<meta property="og:description" content="Professionelle Drohnenaufnahmen für Immobilien, Unternehmen und besondere Momente.">
-<meta property="og:type" content="website">
-<title>Drohnen Fotografie – Perspektiven, die begeistern</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Hey, ich bin Yannick – Technik-Enthusiast, App-Entwickler, Drohnenpilot und stolzer Hunde-Papa von Oskar.">
+  <meta name="theme-color" content="#0A0A0A">
+  <title>Yannick</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<!-- Navigation -->
-<nav id="navbar">
-  <div class="nav-inner">
-    <a href="#" class="nav-logo">
-      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
-        <circle cx="14" cy="14" r="13" stroke="#FF6B00" stroke-width="1.5"/>
-        <path d="M7 14h14M14 7l5 7-5 7M14 7l-5 7 5 7" stroke="#FF6B00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-      <span>AerialVision</span>
-    </a>
-    <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#about">Über mich</a></li>
-      <li><a href="#services">Leistungen</a></li>
-      <li><a href="#gallery">Galerie</a></li>
-      <li><a href="#videos">Videos</a></li>
-      <li><a href="#testimonials">Referenzen</a></li>
-      <li><a href="#contact" class="nav-cta">Anfragen</a></li>
-    </ul>
-  </div>
-</nav>
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="nav-logo" href="#hero">Y.</a>
+      <div class="nav-links">
+        <a href="#about">Über mich</a>
+        <a href="#interests">Interessen</a>
+        <a href="#gallery">Galerie</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menü öffnen">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="navMobile">
+      <a href="#about" class="nav-mobile-link">Über mich</a>
+      <a href="#interests" class="nav-mobile-link">Interessen</a>
+      <a href="#gallery" class="nav-mobile-link">Galerie</a>
+      <a href="#faq" class="nav-mobile-link">FAQ</a>
+    </div>
+  </nav>
 
-<!-- Hero -->
-<section id="hero">
-  <div class="hero-media">
-    <video autoplay muted loop playsinline id="heroVideo">
-      <source src="assets/hero.mp4" type="video/mp4">
-    </video>
-    <div class="hero-fallback" id="heroFallback" aria-hidden="true">
-    <img src="assets/hohewand-01.jpg" alt="" style="width:100%;height:100%;object-fit:cover;">
-  </div>
-  </div>
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <p class="hero-eyebrow reveal-up">Drohnenfotografie &amp; Video</p>
-    <h1 class="hero-headline reveal-up delay-1">Perspektiven,<br>die begeistern.</h1>
-    <p class="hero-sub reveal-up delay-2">Professionelle Drohnenaufnahmen für Immobilien,<br class="br-desk"> Unternehmen und besondere Momente.</p>
-    <a href="#contact" class="btn-primary reveal-up delay-3">Projekt anfragen</a>
-  </div>
-  <a href="#about" class="scroll-hint" aria-label="Weiter scrollen">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12l7 7 7-7" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-  </a>
-</section>
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content reveal">
+      <!-- PLATZHALTER: Ersetze durch dein Profilfoto – <img src="assets/profile.jpg" class="hero-avatar-img" alt="Yannick"> -->
+      <div class="hero-avatar">
+        <div class="hero-avatar-placeholder">Y</div>
+      </div>
+      <h1 class="hero-name">Hey, ich bin<br><span class="hero-name-highlight">Yannick.</span></h1>
+      <p class="hero-sub">Technik-Enthusiast, App-Entwickler und Drohnenpilot aus Österreich. Wenn ich nicht gerade an Projekten arbeite, bin ich mit Oskar unterwegs.</p>
+      <a href="#about" class="hero-cta">Mehr über mich</a>
+    </div>
+    <div class="hero-scroll-hint">
+      <div class="hero-scroll-line"></div>
+    </div>
+  </section>
 
-<!-- About -->
-<section id="about" class="section">
-  <div class="container about-grid">
-    <div class="about-image-wrap reveal-left">
-      <div class="about-img placeholder-img">
-        <div class="placeholder-content">
-          <svg width="64" height="64" viewBox="0 0 64 64" fill="none"><circle cx="32" cy="24" r="12" stroke="#FF6B00" stroke-width="1.5"/><path d="M8 56c0-13.255 10.745-24 24-24s24 10.745 24 24" stroke="#FF6B00" stroke-width="1.5" stroke-linecap="round"/></svg>
-          <span>Portrait</span>
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-label reveal">Über mich</div>
+      <h2 class="section-title reveal">Ein paar Fakten.</h2>
+      <div class="about-grid">
+        <div class="about-card reveal">
+          <div class="about-card-icon">📍</div>
+          <div class="about-card-label">Heimat</div>
+          <div class="about-card-value">Österreich</div>
+        </div>
+        <div class="about-card reveal">
+          <div class="about-card-icon">💻</div>
+          <div class="about-card-label">Beschäftigung</div>
+          <div class="about-card-value">App-Entwicklung &amp; Technik</div>
+        </div>
+        <div class="about-card reveal">
+          <div class="about-card-icon">🐕</div>
+          <div class="about-card-label">Bester Freund</div>
+          <div class="about-card-value">Oskar</div>
+        </div>
+        <div class="about-card reveal">
+          <div class="about-card-icon">🚁</div>
+          <div class="about-card-label">Hobby</div>
+          <div class="about-card-value">Drohnenfotografie</div>
         </div>
       </div>
     </div>
-    <div class="about-text reveal-right">
-      <p class="section-label">Über mich</p>
-      <h2 class="section-headline">Die Welt aus<br>einer neuen Perspektive.</h2>
-      <p class="body-text">Als leidenschaftlicher Drohnenpilot und Fotograf verbinde ich technische Präzision mit künstlerischem Blick. Jeder Auftrag ist für mich mehr als ein Job – es ist die Möglichkeit, etwas Außergewöhnliches zu schaffen.</p>
-      <p class="body-text">Mit jahrelanger Erfahrung und modernster Ausrüstung liefere ich Luftaufnahmen in kinematischer Qualität. Zuverlässigkeit, Sorgfalt und absolute Professionalität sind mein Versprechen an jeden Kunden.</p>
-      <div class="about-stats">
-        <div class="stat"><span class="stat-num">200+</span><span class="stat-label">Projekte</span></div>
-        <div class="stat"><span class="stat-num">5+</span><span class="stat-label">Jahre Erfahrung</span></div>
-        <div class="stat"><span class="stat-num">4K</span><span class="stat-label">Auflösung</span></div>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- Services -->
-<section id="services" class="section section-dark">
-  <div class="container">
-    <div class="section-header reveal-up">
-      <p class="section-label">Was ich biete</p>
-      <h2 class="section-headline">Leistungen</h2>
-      <p class="section-sub">Maßgeschneiderte Luftaufnahmen für jeden Anlass.</p>
-    </div>
-    <div class="services-grid">
-      <div class="service-card reveal-up">
-        <div class="service-icon">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="4" y="8" width="24" height="18" rx="2" stroke="#FF6B00" stroke-width="1.5"/><path d="M10 8V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2" stroke="#FF6B00" stroke-width="1.5"/><path d="M16 17a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" stroke="#FF6B00" stroke-width="1.5"/></svg>
+  <!-- INTERESTS -->
+  <section class="section section-alt" id="interests">
+    <div class="container">
+      <div class="section-label reveal">Was mich antreibt</div>
+      <h2 class="section-title reveal">Meine Interessen.</h2>
+      <div class="interests-grid">
+        <div class="interest-card reveal">
+          <div class="interest-icon">⚡</div>
+          <div class="interest-title">Technik</div>
+          <div class="interest-desc">Neue Gadgets, Hardware und alles was Strom braucht.</div>
         </div>
-        <h3>Immobilienaufnahmen</h3>
-        <p>Beeindruckende Außen- und Innenaufnahmen aus der Luft. Jede Immobilie optimal in Szene gesetzt – für Verkauf, Vermietung und Marketing.</p>
-      </div>
-      <div class="service-card reveal-up delay-1">
-        <div class="service-icon">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M4 26V12l12-8 12 8v14" stroke="#FF6B00" stroke-width="1.5" stroke-linejoin="round"/><rect x="11" y="18" width="10" height="8" rx="1" stroke="#FF6B00" stroke-width="1.5"/><path d="M16 4v4" stroke="#FF6B00" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <div class="interest-card reveal">
+          <div class="interest-icon">📱</div>
+          <div class="interest-title">App-Entwicklung</div>
+          <div class="interest-desc">Ideen in echte Apps verwandeln – am liebsten für iOS.</div>
         </div>
-        <h3>Unternehmensvideos</h3>
-        <p>Präsentieren Sie Ihr Unternehmen, Ihr Gelände oder Ihre Marke mit cineastischen Drohnensequenzen, die bleibenden Eindruck hinterlassen.</p>
-      </div>
-      <div class="service-card reveal-up delay-2">
-        <div class="service-icon">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="6" y="4" width="20" height="24" rx="2" stroke="#FF6B00" stroke-width="1.5"/><path d="M10 10h12M10 15h12M10 20h8" stroke="#FF6B00" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <div class="interest-card reveal">
+          <div class="interest-icon">🚁</div>
+          <div class="interest-title">Drohnenfotografie</div>
+          <div class="interest-desc">Die Welt aus der Vogelperspektive einfangen.</div>
         </div>
-        <h3>Baustellendokumentation</h3>
-        <p>Lückenlose visuelle Dokumentation des Baufortschritts. Regelmäßige Aufnahmen aus der Luft für Planung, Kontrolle und Nachweis.</p>
-      </div>
-      <div class="service-card reveal-up delay-1">
-        <div class="service-icon">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M4 20c4-8 8-12 12-12s8 4 12 12" stroke="#FF6B00" stroke-width="1.5" stroke-linecap="round"/><path d="M8 28c2-4 4-8 8-8s6 4 8 8" stroke="#FF6B00" stroke-width="1.5" stroke-linecap="round"/><circle cx="16" cy="10" r="2" stroke="#FF6B00" stroke-width="1.5"/></svg>
+        <div class="interest-card reveal">
+          <div class="interest-icon">🐾</div>
+          <div class="interest-title">Oskar</div>
+          <div class="interest-desc">Spaziergänge, Abenteuer und bedingungslose Hundeliebe.</div>
         </div>
-        <h3>Tourismus &amp; Landschaft</h3>
-        <p>Atemberaubende Landschaftsaufnahmen für Tourismusverbände, Regionen und Naturprojekte. Die Erde von ihrer schönsten Seite.</p>
-      </div>
-      <div class="service-card reveal-up delay-2">
-        <div class="service-icon">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M16 4l3 9h9l-7 5 3 9-8-6-8 6 3-9-7-5h9z" stroke="#FF6B00" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        <div class="interest-card reveal">
+          <div class="interest-icon">🎵</div>
+          <div class="interest-title">Musik</div>
+          <div class="interest-desc">Guter Sound gehört zum guten Leben dazu.</div>
         </div>
-        <h3>Eventaufnahmen</h3>
-        <p>Hochzeiten, Festivals, Sportevents – Ihr besonderer Moment aus der Vogelperspektive festgehalten. Einzigartige Bilder für unvergessliche Erinnerungen.</p>
+        <div class="interest-card reveal">
+          <div class="interest-icon">🌱</div>
+          <div class="interest-title">Neue Projekte</div>
+          <div class="interest-desc">Immer offen für neue Ideen und spannende Kollaborationen.</div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Gallery -->
-<section id="gallery" class="section">
-  <div class="container">
-    <div class="section-header reveal-up">
-      <p class="section-label">Meine Arbeiten</p>
-      <h2 class="section-headline">Galerie</h2>
-      <p class="section-sub">Ein Blick auf ausgewählte Projekte.</p>
-    </div>
-  </div>
-  <div class="gallery-masonry" id="galleryGrid">
-    <div class="gallery-item reveal-fade" data-index="0">
-      <div class="gallery-placeholder">
-        <img src="assets/strasse-von-oben.jpg" alt="Straße von oben – Drohnenaufnahme" loading="lazy">
-        <div class="gallery-overlay">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="14" stroke="#fff" stroke-width="1.5"/><path d="M10 16l4 4 8-8" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <span class="gallery-label">Straße von oben</span>
+  <!-- GALLERY -->
+  <section class="section" id="gallery">
+    <div class="container">
+      <div class="section-label reveal">Eindrücke</div>
+      <h2 class="section-title reveal">Galerie.</h2>
+      <div class="gallery-tabs reveal">
+        <button class="gallery-tab active" data-filter="all">Alle</button>
+        <button class="gallery-tab" data-filter="drone">Drohne</button>
+        <button class="gallery-tab" data-filter="oskar">Oskar</button>
+        <button class="gallery-tab" data-filter="personal">Persönlich</button>
       </div>
     </div>
-    <div class="gallery-item reveal-fade delay-1" data-index="1">
-      <div class="gallery-placeholder">
-        <img src="assets/winter-01.jpg" alt="Winterlandschaft von oben" loading="lazy">
-        <div class="gallery-overlay">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="14" stroke="#fff" stroke-width="1.5"/><path d="M10 16l4 4 8-8" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <span class="gallery-label">Winterlandschaft</span>
-      </div>
-    </div>
-    <div class="gallery-item reveal-fade delay-2" data-index="2">
-      <div class="gallery-placeholder">
-        <img src="assets/burgforchtenstein.jpg" alt="Burg Forchtenstein aus der Luft" loading="lazy">
-        <div class="gallery-overlay">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="14" stroke="#fff" stroke-width="1.5"/><path d="M10 16l4 4 8-8" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <span class="gallery-label">Burg Forchtenstein</span>
-      </div>
-    </div>
-    <div class="gallery-item reveal-fade" data-index="3">
-      <div class="gallery-placeholder">
-        <img src="assets/hohewand-02.jpg" alt="Hohe Wand im Morgendunst" loading="lazy">
-        <div class="gallery-overlay">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="14" stroke="#fff" stroke-width="1.5"/><path d="M10 16l4 4 8-8" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <span class="gallery-label">Hohe Wand</span>
-      </div>
-    </div>
-    <div class="gallery-item reveal-fade delay-1" data-index="4">
-      <div class="gallery-placeholder">
-        <img src="assets/waldherbst.jpg" alt="Herbstwald aus der Vogelperspektive" loading="lazy">
-        <div class="gallery-overlay">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="14" stroke="#fff" stroke-width="1.5"/><path d="M10 16l4 4 8-8" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <span class="gallery-label">Herbstwald</span>
-      </div>
-    </div>
-    <div class="gallery-item reveal-fade delay-2" data-index="5">
-      <div class="gallery-placeholder">
-        <img src="assets/wings.jpg" alt="Wings – künstlerische Drohnenaufnahme" loading="lazy">
-        <div class="gallery-overlay">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="14" stroke="#fff" stroke-width="1.5"/><path d="M10 16l4 4 8-8" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <span class="gallery-label">Wings</span>
-      </div>
-    </div>
-    <div class="gallery-item reveal-fade" data-index="6">
-      <div class="gallery-placeholder">
-        <img src="assets/winter-02.jpg" alt="Winterpanorama aus der Luft" loading="lazy">
-        <div class="gallery-overlay">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="14" stroke="#fff" stroke-width="1.5"/><path d="M10 16l4 4 8-8" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <span class="gallery-label">Winterpanorama</span>
-      </div>
-    </div>
-    <div class="gallery-item reveal-fade delay-1" data-index="7">
-      <div class="gallery-placeholder">
-        <img src="assets/hohewand-01.jpg" alt="Über den Wolken – Sonnenuntergang" loading="lazy">
-        <div class="gallery-overlay">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="14" stroke="#fff" stroke-width="1.5"/><path d="M10 16l4 4 8-8" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <span class="gallery-label">Über den Wolken</span>
-      </div>
-    </div>
-  </div>
-</section>
+    <div class="gallery-track-wrap">
+      <div class="gallery-track" id="galleryTrack">
 
-<!-- Lightbox -->
-<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Bildvorschau">
-  <button class="lightbox-close" id="lightboxClose" aria-label="Schließen">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M18 6 6 18M6 6l12 12" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg>
-  </button>
-  <div class="lightbox-content" id="lightboxContent"></div>
-  <button class="lightbox-prev" id="lightboxPrev" aria-label="Vorheriges Bild">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-  </button>
-  <button class="lightbox-next" id="lightboxNext" aria-label="Nächstes Bild">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-  </button>
-</div>
-
-<!-- Video Showcase -->
-<section id="videos" class="section section-dark">
-  <div class="container">
-    <div class="section-header reveal-up">
-      <p class="section-label">Bewegtbild</p>
-      <h2 class="section-headline">Video Showreel</h2>
-      <p class="section-sub">Cineastische Drohnensequenzen in 4K-Qualität.</p>
-    </div>
-    <div class="videos-grid">
-      <div class="video-card reveal-up" data-video="1">
-        <div class="video-thumb" style="background: linear-gradient(135deg, #0d1b2a 0%, #1b3a5c 100%);">
-          <div class="video-play-btn">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><polygon points="5,3 19,12 5,21" fill="#fff"/></svg>
-          </div>
-          <div class="video-duration">2:34</div>
-          <span class="video-title">Stadtflieger – Urban Aerial</span>
+        <div class="gallery-item" data-category="drone">
+          <img src="assets/hohewand-01.jpg" alt="Hohe Wand aus der Luft" loading="lazy">
+          <div class="gallery-item-overlay"><span>Hohe Wand</span></div>
         </div>
-      </div>
-      <div class="video-card reveal-up delay-1" data-video="2">
-        <div class="video-thumb" style="background: linear-gradient(135deg, #1a2f0d 0%, #3d6b1a 100%);">
-          <div class="video-play-btn">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><polygon points="5,3 19,12 5,21" fill="#fff"/></svg>
-          </div>
-          <div class="video-duration">3:12</div>
-          <span class="video-title">Naturwunder – Landscape Reel</span>
+        <div class="gallery-item" data-category="drone">
+          <img src="assets/hohewand-02.jpg" alt="Berge im Morgenrot" loading="lazy">
+          <div class="gallery-item-overlay"><span>Morgenrot</span></div>
         </div>
-      </div>
-      <div class="video-card reveal-up delay-2" data-video="3">
-        <div class="video-thumb" style="background: linear-gradient(135deg, #2a0d1a 0%, #6b1a3d 100%);">
-          <div class="video-play-btn">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><polygon points="5,3 19,12 5,21" fill="#fff"/></svg>
-          </div>
-          <div class="video-duration">1:58</div>
-          <span class="video-title">Immobilien Showcase</span>
+        <div class="gallery-item" data-category="drone">
+          <img src="assets/hohewand-03.jpg" alt="Bergpanorama" loading="lazy">
+          <div class="gallery-item-overlay"><span>Bergpanorama</span></div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+        <div class="gallery-item" data-category="drone">
+          <img src="assets/waldherbst.jpg" alt="Herbstwald von oben" loading="lazy">
+          <div class="gallery-item-overlay"><span>Herbstwald</span></div>
+        </div>
+        <div class="gallery-item" data-category="drone">
+          <img src="assets/burgforchtenstein.jpg" alt="Burg Forchtenstein" loading="lazy">
+          <div class="gallery-item-overlay"><span>Burg Forchtenstein</span></div>
+        </div>
+        <div class="gallery-item" data-category="drone">
+          <img src="assets/strasse-von-oben.jpg" alt="Straße von oben" loading="lazy">
+          <div class="gallery-item-overlay"><span>Vogelperspektive</span></div>
+        </div>
+        <div class="gallery-item" data-category="drone">
+          <img src="assets/winter-01.jpg" alt="Winterlandschaft" loading="lazy">
+          <div class="gallery-item-overlay"><span>Winter</span></div>
+        </div>
+        <div class="gallery-item" data-category="drone">
+          <img src="assets/wings.jpg" alt="Wings" loading="lazy">
+          <div class="gallery-item-overlay"><span>Wings</span></div>
+        </div>
 
-<!-- Video Overlay -->
-<div class="video-overlay" id="videoOverlay" role="dialog" aria-modal="true" aria-label="Video abspielen">
-  <button class="lightbox-close" id="videoOverlayClose" aria-label="Schließen">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M18 6 6 18M6 6l12 12" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg>
-  </button>
-  <div class="video-overlay-inner">
-    <div class="video-placeholder-player">
-      <svg width="80" height="80" viewBox="0 0 80 80" fill="none"><circle cx="40" cy="40" r="38" stroke="#FF6B00" stroke-width="1.5"/><polygon points="30,20 62,40 30,60" fill="#FF6B00"/></svg>
-      <p>Hier würde Ihr Video-Player erscheinen.<br>Bitte verlinken Sie Ihre MP4-Datei unter <code>assets/video-[n].mp4</code></p>
-    </div>
-  </div>
-</div>
-
-<!-- Testimonials -->
-<section id="testimonials" class="section">
-  <div class="container">
-    <div class="section-header reveal-up">
-      <p class="section-label">Kundenstimmen</p>
-      <h2 class="section-headline">Was meine Kunden sagen.</h2>
-    </div>
-    <div class="testimonials-grid">
-      <div class="testimonial-card reveal-up">
-        <div class="stars">★★★★★</div>
-        <p class="testimonial-text">"Absolute Professionalität von der Planung bis zur finalen Dateiübergabe. Die Luftaufnahmen unserer Immobilie haben den Verkauf innerhalb von einer Woche abgeschlossen."</p>
-        <div class="testimonial-author">
-          <div class="author-avatar" style="background: #1C3A5E;">MK</div>
-          <div>
-            <strong>Markus Krause</strong>
-            <span>Immobilienmakler, München</span>
+        <!-- PLATZHALTER: Oskar-Fotos – ersetze durch echte Fotos -->
+        <div class="gallery-item gallery-placeholder" data-category="oskar">
+          <div class="gallery-placeholder-inner">
+            <span class="gallery-placeholder-icon">🐾</span>
+            <span class="gallery-placeholder-text">Oskar Foto<br><small>Platzhalter</small></span>
           </div>
         </div>
-      </div>
-      <div class="testimonial-card reveal-up delay-1">
-        <div class="stars">★★★★★</div>
-        <p class="testimonial-text">"Für unser Unternehmensfilm-Projekt war die Zusammenarbeit ein Traum. Schnell, zuverlässig und das Ergebnis hat alle Erwartungen übertroffen."</p>
-        <div class="testimonial-author">
-          <div class="author-avatar" style="background: #3A1C5E;">SB</div>
-          <div>
-            <strong>Sandra Bauer</strong>
-            <span>Marketingleiterin, Stuttgart</span>
+        <div class="gallery-item gallery-placeholder" data-category="oskar">
+          <div class="gallery-placeholder-inner">
+            <span class="gallery-placeholder-icon">🐕</span>
+            <span class="gallery-placeholder-text">Oskar Foto<br><small>Platzhalter</small></span>
           </div>
         </div>
-      </div>
-      <div class="testimonial-card reveal-up delay-2">
-        <div class="stars">★★★★★</div>
-        <p class="testimonial-text">"Die Hochzeitsaufnahmen aus der Luft waren das Highlight unseres Albums. Jeder Gast war begeistert – wir können es nur empfehlen!"</p>
-        <div class="testimonial-author">
-          <div class="author-avatar" style="background: #1C5E3A;">LH</div>
-          <div>
-            <strong>Lena &amp; Tobias Hoffmann</strong>
-            <span>Hochzeitspaar, Hamburg</span>
+        <div class="gallery-item gallery-placeholder" data-category="oskar">
+          <div class="gallery-placeholder-inner">
+            <span class="gallery-placeholder-icon">🌿</span>
+            <span class="gallery-placeholder-text">Oskar &amp; Natur<br><small>Platzhalter</small></span>
           </div>
         </div>
-      </div>
-      <div class="testimonial-card reveal-up">
-        <div class="stars">★★★★★</div>
-        <p class="testimonial-text">"Unsere Baustelle wird jetzt monatlich von oben dokumentiert. Die Qualität ist beeindruckend und der Service läuft völlig reibungslos."</p>
-        <div class="testimonial-author">
-          <div class="author-avatar" style="background: #5E3A1C;">TM</div>
-          <div>
-            <strong>Thomas Meyer</strong>
-            <span>Projektleiter, Frankfurt</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- Contact -->
-<section id="contact" class="section section-dark">
-  <div class="container contact-grid">
-    <div class="contact-info reveal-left">
-      <p class="section-label">Kontakt</p>
-      <h2 class="section-headline">Starten wir Ihr Projekt.</h2>
-      <p class="body-text">Schildern Sie mir Ihr Vorhaben – ich melde mich innerhalb von 24 Stunden und unterbreite Ihnen ein unverbindliches Angebot.</p>
-      <div class="contact-details">
-        <div class="contact-item">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M2 4l8 6 8-6" stroke="#FF6B00" stroke-width="1.5" stroke-linecap="round"/><rect x="2" y="4" width="16" height="12" rx="2" stroke="#FF6B00" stroke-width="1.5"/></svg>
-          <a href="mailto:info@aerialvision.de">info@aerialvision.de</a>
+        <!-- PLATZHALTER: Persönliche Fotos – ersetze durch echte Fotos -->
+        <div class="gallery-item gallery-placeholder" data-category="personal">
+          <div class="gallery-placeholder-inner">
+            <span class="gallery-placeholder-icon">👤</span>
+            <span class="gallery-placeholder-text">Persönliches Foto<br><small>Platzhalter</small></span>
+          </div>
         </div>
-        <div class="contact-item">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 3l3 1 1 4-2 2s1 4 4 6l2-2 4 1 1 3-3 1C7 19 1 13 1 7l2-4z" stroke="#FF6B00" stroke-width="1.5" stroke-linejoin="round"/></svg>
-          <a href="tel:+4917600000000">+49 176 000 000 00</a>
+        <div class="gallery-item gallery-placeholder" data-category="personal">
+          <div class="gallery-placeholder-inner">
+            <span class="gallery-placeholder-icon">📸</span>
+            <span class="gallery-placeholder-text">Persönliches Foto<br><small>Platzhalter</small></span>
+          </div>
         </div>
-        <div class="contact-item">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="8" r="3" stroke="#FF6B00" stroke-width="1.5"/><path d="M10 2C6.686 2 4 4.686 4 8c0 5 6 10 6 10s6-5 6-10c0-3.314-2.686-6-6-6z" stroke="#FF6B00" stroke-width="1.5"/></svg>
-          <span>München &amp; bundesweit</span>
-        </div>
-      </div>
-    </div>
-    <form class="contact-form reveal-right" id="contactForm" novalidate>
-      <div class="form-group">
-        <label for="name">Name <span aria-hidden="true">*</span></label>
-        <input type="text" id="name" name="name" placeholder="Ihr Name" required autocomplete="name">
-      </div>
-      <div class="form-group">
-        <label for="email">E-Mail <span aria-hidden="true">*</span></label>
-        <input type="email" id="email" name="email" placeholder="ihre@email.de" required autocomplete="email">
-      </div>
-      <div class="form-group">
-        <label for="subject">Betreff</label>
-        <select id="subject" name="subject">
-          <option value="">Bitte wählen…</option>
-          <option>Immobilienaufnahmen</option>
-          <option>Unternehmensfilm</option>
-          <option>Baustellendokumentation</option>
-          <option>Tourismus &amp; Landschaft</option>
-          <option>Eventaufnahmen</option>
-          <option>Sonstiges</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="message">Nachricht <span aria-hidden="true">*</span></label>
-        <textarea id="message" name="message" rows="5" placeholder="Beschreiben Sie Ihr Projekt…" required></textarea>
-      </div>
-      <div class="form-dsgvo">
-        <input type="checkbox" id="dsgvo" name="dsgvo" required>
-        <label for="dsgvo">Ich habe die <a href="#privacy">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zur Bearbeitung meiner Anfrage zu. <span aria-hidden="true">*</span></label>
-      </div>
-      <button type="submit" class="btn-primary btn-full">Nachricht senden</button>
-      <div class="form-success" id="formSuccess" role="alert" aria-live="polite"></div>
-    </form>
-  </div>
-</section>
 
-<!-- Footer -->
-<footer id="footer">
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <a href="#" class="nav-logo">
-        <svg width="24" height="24" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="13" stroke="#FF6B00" stroke-width="1.5"/><path d="M7 14h14M14 7l5 7-5 7M14 7l-5 7 5 7" stroke="#FF6B00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <span>AerialVision</span>
-      </a>
-      <p>Professionelle Drohnenaufnahmen<br>in cineastischer Qualität.</p>
+      </div>
     </div>
-    <div class="footer-links">
-      <div class="footer-col">
-        <h4>Navigation</h4>
-        <ul>
-          <li><a href="#about">Über mich</a></li>
-          <li><a href="#services">Leistungen</a></li>
-          <li><a href="#gallery">Galerie</a></li>
-          <li><a href="#contact">Kontakt</a></li>
-        </ul>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Bildvorschau">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Schließen">✕</button>
+      <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Zurück">‹</button>
+      <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Weiter">›</button>
+      <img class="lightbox-img" id="lightboxImg" src="" alt="">
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section-alt" id="faq">
+    <div class="container">
+      <div class="section-label reveal">Schnell gefragt</div>
+      <h2 class="section-title reveal">FAQ.</h2>
+      <div class="faq-list">
+
+        <div class="faq-item reveal">
+          <button class="faq-question" aria-expanded="false">
+            Frühaufsteher oder Langschläfer?
+            <span class="faq-arrow">↓</span>
+          </button>
+          <div class="faq-answer">
+            <p>Kommt auf den Tag an. Wenn Oskar entscheidet, bin ich definitiv Frühaufsteher.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question" aria-expanded="false">
+            Berge oder Meer?
+            <span class="faq-arrow">↓</span>
+          </button>
+          <div class="faq-answer">
+            <p>Berge – aus der Vogelperspektive noch viel schöner.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question" aria-expanded="false">
+            Kaffee oder Tee?
+            <span class="faq-arrow">↓</span>
+          </button>
+          <div class="faq-answer">
+            <p>Kaffee. Ohne Kaffee kein Code.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question" aria-expanded="false">
+            Hund oder Katze?
+            <span class="faq-arrow">↓</span>
+          </button>
+          <div class="faq-answer">
+            <p>Diese Frage stellt sich gar nicht – Oskar hat sie beantwortet.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question" aria-expanded="false">
+            App-Idee gehabt und nicht umgesetzt?
+            <span class="faq-arrow">↓</span>
+          </button>
+          <div class="faq-answer">
+            <p>Ja. Zu viele. Die Notizen-App ist voll.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question" aria-expanded="false">
+            Was machst du, wenn du mal nicht am Handy bist?
+            <span class="faq-arrow">↓</span>
+          </button>
+          <div class="faq-answer">
+            <p>Dann bin ich wahrscheinlich mit Oskar draußen. Oder die Drohne ist in der Luft.</p>
+          </div>
+        </div>
+
       </div>
-      <div class="footer-col">
-        <h4>Rechtliches</h4>
-        <ul>
-          <li><a href="#impressum" id="impressumLink">Impressum</a></li>
-          <li><a href="#privacy" id="privacyLink">Datenschutz</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Social Media</h4>
-        <div class="social-links">
-          <a href="#" aria-label="Instagram" class="social-link">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-name">Yannick</div>
+        <div class="footer-links">
+          <!-- PLATZHALTER: Instagram-Benutzernamen anpassen -->
+          <a class="footer-link" href="https://instagram.com/DEIN_USERNAME" target="_blank" rel="noopener" aria-label="Yannicks Instagram">
+            <svg class="footer-ig-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/></svg>
+            Yannick
           </a>
-          <a href="#" aria-label="YouTube" class="social-link">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="2" y="5" width="20" height="14" rx="4" stroke="currentColor" stroke-width="1.5"/><polygon points="10,9 16,12 10,15" fill="currentColor"/></svg>
-          </a>
-          <a href="#" aria-label="LinkedIn" class="social-link">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="4" stroke="currentColor" stroke-width="1.5"/><path d="M7 10v7M7 7v.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M11 17v-4c0-1.5 1-2 2-2s2 .5 2 2v4M11 10v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <a class="footer-link" href="https://instagram.com/OSKARS_USERNAME" target="_blank" rel="noopener" aria-label="Oskars Instagram">
+            <svg class="footer-ig-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/></svg>
+            Oskar 🐾
           </a>
         </div>
+        <div class="footer-copy">© 2025 Yannick</div>
       </div>
     </div>
-  </div>
-  <div class="footer-bottom">
-    <p>&copy; 2025 AerialVision. Alle Rechte vorbehalten.</p>
-  </div>
-</footer>
+  </footer>
 
-<!-- Legal Modals -->
-<div class="modal" id="impressumModal" role="dialog" aria-modal="true" aria-labelledby="impressumTitle">
-  <div class="modal-box">
-    <button class="modal-close" data-modal="impressumModal" aria-label="Schließen">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M18 6 6 18M6 6l12 12" stroke="#000" stroke-width="1.5" stroke-linecap="round"/></svg>
-    </button>
-    <h2 id="impressumTitle">Impressum</h2>
-    <p><strong>AerialVision Drohnenfotografie</strong><br>Max Mustermann<br>Musterstraße 1<br>80331 München</p>
-    <p>E-Mail: <a href="mailto:info@aerialvision.de">info@aerialvision.de</a><br>Telefon: +49 176 000 000 00</p>
-    <p>Umsatzsteuer-Identifikationsnummer: DE 000 000 000<br>Verantwortlich für den Inhalt: Max Mustermann</p>
-  </div>
-</div>
-
-<div class="modal" id="privacyModal" role="dialog" aria-modal="true" aria-labelledby="privacyTitle">
-  <div class="modal-box">
-    <button class="modal-close" data-modal="privacyModal" aria-label="Schließen">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M18 6 6 18M6 6l12 12" stroke="#000" stroke-width="1.5" stroke-linecap="round"/></svg>
-    </button>
-    <h2 id="privacyTitle">Datenschutzerklärung</h2>
-    <p>Die Erhebung und Verarbeitung Ihrer personenbezogenen Daten erfolgt unter Beachtung der geltenden datenschutzrechtlichen Vorschriften, insbesondere der DSGVO.</p>
-    <h3>Kontaktformular</h3>
-    <p>Wenn Sie das Kontaktformular nutzen, werden die von Ihnen angegebenen Daten (Name, E-Mail-Adresse, Nachricht) zur Bearbeitung Ihrer Anfrage gespeichert. Diese Daten werden nicht an Dritte weitergegeben.</p>
-    <h3>Ihre Rechte</h3>
-    <p>Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung sowie Datenübertragbarkeit. Wenden Sie sich dazu an: <a href="mailto:info@aerialvision.de">info@aerialvision.de</a></p>
-  </div>
-</div>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
