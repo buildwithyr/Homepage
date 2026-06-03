@@ -7,21 +7,18 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 
 // ── Cinematic hero reveal ─────────────────────────────────────────────────────
-// Das Foto bleibt gepinnt; beim ersten Scrollen blenden Overlay + Text aus dem
-// Bild heraus ein. Reversibel, damit es beim Zurückscrollen ruhig zurückgeht.
+// Foto bleibt gepinnt. Beim Scrollen: Pfeil blendet aus, Overlay blendet ein,
+// Name fährt aus dem Bild nach oben. Reversibel beim Zurückscrollen.
 const heroSticky = document.getElementById('heroSticky');
 if (heroSticky) {
   let ticking = false;
   const updateHero = () => {
-    const trigger = window.innerHeight * 0.32;
-    heroSticky.classList.toggle('revealed', window.scrollY > trigger);
+    // Trigger bei ~35 % Viewport-Höhe – früh genug für einen fließenden Effekt
+    heroSticky.classList.toggle('revealed', window.scrollY > window.innerHeight * 0.35);
     ticking = false;
   };
   window.addEventListener('scroll', () => {
-    if (!ticking) {
-      window.requestAnimationFrame(updateHero);
-      ticking = true;
-    }
+    if (!ticking) { window.requestAnimationFrame(updateHero); ticking = true; }
   }, { passive: true });
   updateHero();
 }
