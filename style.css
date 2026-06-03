@@ -52,6 +52,11 @@ button { background: none; border: none; cursor: pointer; font-family: inherit; 
   transform: translateY(0);
 }
 
+/* Gestaffelte Delays für Hero-Intro-Elemente */
+.hero-intro-inner .hero-name.reveal  { transition-delay: 0.05s; }
+.hero-intro-inner .hero-sub.reveal   { transition-delay: 0.2s; }
+.hero-intro-inner .hero-cta.reveal   { transition-delay: 0.36s; }
+
 /* ==========================================
    LAYOUT
    ========================================== */
@@ -167,14 +172,11 @@ button { background: none; border: none; cursor: pointer; font-family: inherit; 
 .nav-mobile-link:hover { color: var(--text); }
 
 /* ==========================================
-   HERO
+   HERO – SCREEN 1: Foto
    ========================================== */
-.hero {
+.hero-photo {
   position: relative;
-  min-height: 100svh;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  height: 100svh;
   overflow: hidden;
 }
 
@@ -197,20 +199,29 @@ button { background: none; border: none; cursor: pointer; font-family: inherit; 
   inset: 0;
   background:
     linear-gradient(to bottom,
-      rgba(10,10,10,0.35) 0%,
-      rgba(10,10,10,0.0)  30%,
-      rgba(10,10,10,0.0)  40%,
-      rgba(10,10,10,0.75) 70%,
+      rgba(10,10,10,0.3)  0%,
+      rgba(10,10,10,0.0) 18%,
+      rgba(10,10,10,0.0) 65%,
+      rgba(10,10,10,0.85) 88%,
       rgba(10,10,10,1.0) 100%
     );
   z-index: 1;
 }
 
-.hero-content {
-  position: relative;
-  z-index: 2;
-  padding: 0 24px 72px;
-  max-width: 760px;
+/* ==========================================
+   HERO – SCREEN 2: Intro-Text
+   ========================================== */
+.hero-intro {
+  background: var(--bg);
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 24px;
+}
+
+.hero-intro-inner {
+  max-width: 680px;
   width: 100%;
   text-align: center;
 }
@@ -220,9 +231,8 @@ button { background: none; border: none; cursor: pointer; font-family: inherit; 
   font-weight: 900;
   letter-spacing: -0.04em;
   line-height: 1.0;
-  margin-bottom: 18px;
-  color: #fff;
-  text-shadow: 0 2px 32px rgba(0,0,0,0.4);
+  margin-bottom: 20px;
+  color: var(--text);
 }
 .hero-name-highlight {
   background: linear-gradient(135deg, #60C8FF 0%, #0A84FF 50%, #5E5CE6 100%);
@@ -234,7 +244,7 @@ button { background: none; border: none; cursor: pointer; font-family: inherit; 
 .hero-sub {
   font-size: clamp(16px, 2.5vw, 20px);
   font-weight: 400;
-  color: rgba(255,255,255,0.75);
+  color: var(--text-2);
   max-width: 520px;
   margin: 0 auto 36px;
   line-height: 1.65;
@@ -675,8 +685,8 @@ button { background: none; border: none; cursor: pointer; font-family: inherit; 
   .section { padding: 72px 0; }
   .section-title { margin-bottom: 32px; }
 
-  .hero-content { padding-bottom: 80px; }
   .hero-bg-img { background-position: 58% 30%; }
+  .hero-intro { padding: 60px 24px; min-height: 100svh; }
 
   .about-grid { gap: 10px; }
   .about-card { padding: 20px 14px; }

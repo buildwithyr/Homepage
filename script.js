@@ -35,7 +35,9 @@ document.querySelectorAll('.nav-mobile-link').forEach(link => {
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry, i) => {
     if (entry.isIntersecting) {
-      setTimeout(() => entry.target.classList.add('visible'), i * 60);
+      const inHeroIntro = entry.target.closest('.hero-intro-inner');
+      const delay = inHeroIntro ? 0 : i * 60;
+      setTimeout(() => entry.target.classList.add('visible'), delay);
       revealObserver.unobserve(entry.target);
     }
   });

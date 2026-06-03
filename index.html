@@ -39,17 +39,21 @@
     </div>
   </nav>
 
-  <!-- HERO -->
-  <section class="hero" id="hero">
+  <!-- HERO PHOTO: Erster Screen – nur das Foto, kein Text -->
+  <section class="hero-photo" id="hero">
     <div class="hero-bg-img"></div>
     <div class="hero-gradient"></div>
-    <div class="hero-content reveal">
-      <h1 class="hero-name">Hey, ich bin<br><span class="hero-name-highlight">Yannick.</span></h1>
-      <p class="hero-sub">Technik-Enthusiast, App-Entwickler und Drohnenpilot aus Österreich. Wenn ich nicht gerade an Projekten arbeite, bin ich mit Oskar unterwegs.</p>
-      <a href="#about" class="hero-cta">Mehr erfahren</a>
-    </div>
-    <div class="hero-scroll-hint">
+    <div class="hero-scroll-hint" aria-hidden="true">
       <div class="hero-scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- HERO INTRO: Zweiter Screen – erscheint beim ersten Scrollen -->
+  <section class="hero-intro" id="intro">
+    <div class="hero-intro-inner">
+      <h1 class="hero-name reveal">Hey, ich bin<br><span class="hero-name-highlight">Yannick.</span></h1>
+      <p class="hero-sub reveal">Technik-Enthusiast, App-Entwickler und Drohnenpilot aus Österreich. Wenn ich nicht gerade an Projekten arbeite, bin ich mit Oskar unterwegs.</p>
+      <a href="#about" class="hero-cta reveal">Mehr erfahren</a>
     </div>
   </section>
 
