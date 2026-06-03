@@ -11,7 +11,7 @@ const heroBg = document.querySelector('.hero-bg-img');
 if (heroBg) {
   const img = new Image();
   img.onload = () => heroBg.classList.add('loaded');
-  img.src = 'assets/ICH_laufen.JPEG';
+  img.src = 'assets/ICH_schwarz_neu.JPEG';
 }
 
 // ── Mobile hamburger ──────────────────────────────────────────────────────────

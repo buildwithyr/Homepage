@@ -181,10 +181,11 @@ button { background: none; border: none; cursor: pointer; font-family: inherit; 
 .hero-bg-img {
   position: absolute;
   inset: 0;
-  background-image: url('assets/ICH_laufen.JPEG');
+  background-image: url('assets/ICH_schwarz_neu.JPEG');
   background-size: cover;
-  background-position: center 20%;
+  background-position: 60% 38%;
   background-repeat: no-repeat;
+  background-color: #000;
   transform: scale(1.04);
   transition: transform 8s ease;
   z-index: 0;
@@ -675,6 +676,7 @@ button { background: none; border: none; cursor: pointer; font-family: inherit; 
   .section-title { margin-bottom: 32px; }
 
   .hero-content { padding-bottom: 80px; }
+  .hero-bg-img { background-position: 58% 30%; }
 
   .about-grid { gap: 10px; }
   .about-card { padding: 20px 14px; }
