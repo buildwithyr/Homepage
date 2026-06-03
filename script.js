@@ -13,8 +13,8 @@ const heroSticky = document.getElementById('heroSticky');
 if (heroSticky) {
   let ticking = false;
   const updateHero = () => {
-    // Trigger bei ~35 % Viewport-Höhe – früh genug für einen fließenden Effekt
-    heroSticky.classList.toggle('revealed', window.scrollY > window.innerHeight * 0.35);
+    // Sehr früher Trigger: schon bei wenigen Zentimetern Scroll erscheint der Name
+    heroSticky.classList.toggle('revealed', window.scrollY > 40);
     ticking = false;
   };
   window.addEventListener('scroll', () => {

@@ -682,10 +682,18 @@ button { background: none; border: none; cursor: pointer; font-family: inherit; 
   .section { padding: 72px 0; }
   .section-title { margin-bottom: 32px; }
 
-  /* Mobile: Foto etwas höher positionieren, damit Gesicht nicht abgeschnitten */
-  .hero-bg-img { background-position: center 16%; }
-  .hero-name { font-size: clamp(36px, 8vw, 60px); }
-  .hero-name-wrap { bottom: 14%; }
+  /* Mobile: Bild bündig oben. Bildhöhe ≈ 111.5vw (1188×1324) →
+     Pfeil sitzt direkt unter dem Bild, Name schwebt über dem unteren Bilddrittel. */
+  .hero-bg-img { background-position: center top; }
+  .hero-name { font-size: clamp(34px, 9vw, 58px); }
+  .hero-name-wrap {
+    top: auto;
+    bottom: calc(100svh - 111.5vw + 7vw);
+  }
+  .hero-arrow {
+    top: auto;
+    bottom: calc(100svh - 111.5vw - 18px);
+  }
 
   .about-grid { gap: 10px; }
   .about-card { padding: 20px 14px; }
