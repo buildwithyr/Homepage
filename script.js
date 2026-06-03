@@ -6,12 +6,24 @@ window.addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', window.scrollY > 20);
 }, { passive: true });
 
-// ── Hero image subtle zoom on load ────────────────────────────────────────────
-const heroBg = document.querySelector('.hero-bg-img');
-if (heroBg) {
-  const img = new Image();
-  img.onload = () => heroBg.classList.add('loaded');
-  img.src = 'assets/ICH_schwarz_neu.JPEG';
+// ── Cinematic hero reveal ─────────────────────────────────────────────────────
+// Das Foto bleibt gepinnt; beim ersten Scrollen blenden Overlay + Text aus dem
+// Bild heraus ein. Reversibel, damit es beim Zurückscrollen ruhig zurückgeht.
+const heroSticky = document.getElementById('heroSticky');
+if (heroSticky) {
+  let ticking = false;
+  const updateHero = () => {
+    const trigger = window.innerHeight * 0.32;
+    heroSticky.classList.toggle('revealed', window.scrollY > trigger);
+    ticking = false;
+  };
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(updateHero);
+      ticking = true;
+    }
+  }, { passive: true });
+  updateHero();
 }
 
 // ── Mobile hamburger ──────────────────────────────────────────────────────────
@@ -35,9 +47,7 @@ document.querySelectorAll('.nav-mobile-link').forEach(link => {
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry, i) => {
     if (entry.isIntersecting) {
-      const inHeroIntro = entry.target.closest('.hero-intro-inner');
-      const delay = inHeroIntro ? 0 : i * 60;
-      setTimeout(() => entry.target.classList.add('visible'), delay);
+      setTimeout(() => entry.target.classList.add('visible'), i * 60);
       revealObserver.unobserve(entry.target);
     }
   });
