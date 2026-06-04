@@ -662,6 +662,166 @@ button { background: none; border: none; cursor: pointer; font-family: inherit; 
 .footer-copy { font-size: 13px; color: var(--text-3); }
 
 /* ==========================================
+   FUN ENDING
+   ========================================== */
+.fun-ending { text-align: center; }
+
+.fun-ending-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.fun-ending-title { margin-bottom: 4px; }
+
+.fun-ending-sub {
+  font-size: clamp(16px, 2.4vw, 20px);
+  color: var(--text-2);
+  max-width: 500px;
+  line-height: 1.55;
+  margin-bottom: 12px;
+}
+
+.fun-ending-btns {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  min-height: 56px;
+}
+
+.fun-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 44px;
+  border-radius: 100px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.fun-btn-yes {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  box-shadow: 0 0 0 0 var(--accent-glow);
+  transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+}
+.fun-btn-yes:hover {
+  background: #1e8eff;
+  box-shadow: 0 8px 28px var(--accent-glow);
+  transform: translateY(-2px);
+}
+.fun-btn-yes:active { transform: translateY(0) scale(0.97); }
+
+.fun-btn-no {
+  background: var(--surface);
+  color: var(--text-2);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: transform 0.2s cubic-bezier(0.22, 0.61, 0.36, 1),
+              color 0.2s ease, border-color 0.2s ease;
+}
+.fun-btn-no:hover { color: var(--text); border-color: var(--border-2); }
+
+/* ==========================================
+   COFFEE MODAL
+   ========================================== */
+.coffee-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.72);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 500;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+.coffee-modal-backdrop.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.coffee-modal {
+  background: var(--surface);
+  border: 1px solid var(--border-2);
+  border-radius: var(--radius-lg);
+  padding: 48px 40px 44px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  position: relative;
+  transform: scale(0.9) translateY(20px);
+  transition: transform 0.32s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 40px 100px rgba(0,0,0,0.65);
+}
+.coffee-modal-backdrop.active .coffee-modal {
+  transform: scale(1) translateY(0);
+}
+
+.coffee-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--surface-2);
+  color: var(--text-2);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.coffee-modal-close:hover { background: var(--border-2); color: var(--text); }
+.coffee-modal-close svg { width: 14px; height: 14px; }
+
+.coffee-modal-emoji { font-size: 52px; line-height: 1; margin-bottom: 2px; }
+
+.coffee-modal-title {
+  font-size: clamp(20px, 4vw, 24px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+.coffee-modal-text {
+  font-size: 15px;
+  color: var(--text-2);
+  line-height: 1.6;
+}
+
+.coffee-modal-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 13px 30px;
+  border-radius: 100px;
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 6px;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.coffee-modal-btn:hover { opacity: 0.88; transform: translateY(-2px); }
+.coffee-modal-btn svg { width: 17px; height: 17px; flex-shrink: 0; }
+
+/* ==========================================
    RESPONSIVE
    ========================================== */
 @media (max-width: 900px) {

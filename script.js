@@ -222,3 +222,53 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     window.scrollTo({ top: target.offsetTop - 64, behavior: 'smooth' });
   });
 });
+
+// ── Fun Ending ────────────────────────────────────────────────────────────────
+(function () {
+  const btnJa      = document.getElementById('btnJa');
+  const btnNein    = document.getElementById('btnNein');
+  const modal      = document.getElementById('coffeeModal');
+  const modalClose = document.getElementById('coffeeModalClose');
+  if (!btnJa) return; // section not present → bail out
+
+  // Modal
+  function openModal() {
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal() {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+  btnJa.addEventListener('click', openModal);
+  modalClose.addEventListener('click', closeModal);
+  modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+  // Nein button – dodge on hover / touch
+  let tx = 0, ty = 0;
+
+  function dodge(px, py) {
+    const r  = btnNein.getBoundingClientRect();
+    const bx = r.left + r.width  / 2;
+    const by = r.top  + r.height / 2;
+    const dx = bx - px, dy = by - py;
+    const d  = Math.hypot(dx, dy) || 1;
+    // Move 230px away from the pointer
+    let nx = bx + (dx / d) * 230;
+    let ny = by + (dy / d) * 230;
+    // Clamp within viewport (keep clear of nav bar at top)
+    const m = 20, navH = 72;
+    nx = Math.max(r.width  / 2 + m,         Math.min(window.innerWidth  - r.width  / 2 - m, nx));
+    ny = Math.max(r.height / 2 + m + navH,  Math.min(window.innerHeight - r.height / 2 - m, ny));
+    tx += nx - bx;
+    ty += ny - by;
+    btnNein.style.transform = `translate(${tx}px,${ty}px)`;
+  }
+
+  btnNein.addEventListener('mouseenter', e => dodge(e.clientX, e.clientY));
+  btnNein.addEventListener('touchstart', e => {
+    e.preventDefault(); // prevents synthesised click so the button can't be tapped
+    dodge(e.touches[0].clientX, e.touches[0].clientY);
+  }, { passive: false });
+}());
