@@ -6,23 +6,6 @@ window.addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', window.scrollY > 20);
 }, { passive: true });
 
-// ── Cinematic hero reveal ─────────────────────────────────────────────────────
-// Foto bleibt gepinnt. Beim Scrollen: Pfeil blendet aus, Overlay blendet ein,
-// Name fährt aus dem Bild nach oben. Reversibel beim Zurückscrollen.
-const heroSticky = document.getElementById('heroSticky');
-if (heroSticky) {
-  let ticking = false;
-  const updateHero = () => {
-    // Sehr früher Trigger: schon bei wenigen Zentimetern Scroll erscheint der Name
-    heroSticky.classList.toggle('revealed', window.scrollY > 40);
-    ticking = false;
-  };
-  window.addEventListener('scroll', () => {
-    if (!ticking) { window.requestAnimationFrame(updateHero); ticking = true; }
-  }, { passive: true });
-  updateHero();
-}
-
 // ── Mobile hamburger ──────────────────────────────────────────────────────────
 const hamburger = document.getElementById('hamburger');
 const navMobile = document.getElementById('navMobile');
