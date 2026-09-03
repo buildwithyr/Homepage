@@ -259,12 +259,6 @@ button { background: none; border: none; cursor: pointer; font-family: inherit; 
   height: 100%;
   object-fit: cover;
 }
-/* Platzhalter-Foto (dunkle Aufnahme) aufgehellt, bis das neue Studio-Portrait
-   unter assets/Yannick_Portrait.jpg eingesetzt wird – Klasse dann entfernen. */
-.hero-photo-tmp {
-  filter: brightness(1.35) contrast(1.05) saturate(1.05);
-}
-
 @media (max-width: 900px) {
   .hero { padding: 128px 0 64px; }
   .hero-inner { grid-template-columns: 1fr; gap: 40px; text-align: center; }
