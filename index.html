@@ -3,13 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="description" content="Hey, ich bin Yannick – Technik-Enthusiast, App-Entwickler, Drohnenpilot und stolzer Hunde-Papa von Oskar.">
-  <meta name="theme-color" content="#0A0A0A">
+  <meta name="description" content="Hey, ich bin Yannick – Technik-Begeisterter, Drohnenfotograf, Naturmensch und stolzer Hunde-Papa von Oskar.">
+  <meta name="theme-color" content="#FAF6F0">
   <title>Yannick</title>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Vercel Web Analytics -->
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
 
@@ -41,15 +47,21 @@
 
   <!-- HERO -->
   <section class="hero" id="hero">
-    <div class="hero-bg-img"></div>
-    <div class="hero-gradient"></div>
-    <div class="hero-content reveal">
-      <h1 class="hero-name">Hey, ich bin<br><span class="hero-name-highlight">Yannick.</span></h1>
-      <p class="hero-sub">Technik-Enthusiast, App-Entwickler und Drohnenpilot aus Österreich. Wenn ich nicht gerade an Projekten arbeite, bin ich mit Oskar unterwegs.</p>
-      <a href="#about" class="hero-cta">Mehr erfahren</a>
-    </div>
-    <div class="hero-scroll-hint">
-      <div class="hero-scroll-line"></div>
+    <div class="container hero-inner">
+      <div class="hero-copy reveal">
+        <p class="hero-eyebrow">Hey, ich bin</p>
+        <h1 class="hero-title">Yannick<span class="hero-dot">.</span></h1>
+        <p class="hero-sub">Technik-Begeisterter, Drohnenfotograf, Naturmensch und stolzer Hunde-Papa von Oskar.</p>
+        <div class="hero-cta">
+          <a href="#about" class="hero-btn">Über mich</a>
+          <a href="#gallery" class="hero-btn hero-btn-ghost">Galerie ansehen</a>
+        </div>
+      </div>
+      <div class="hero-photo-wrap reveal">
+        <div class="hero-photo-card">
+          <img src="assets/YannickPortrait.jpg" alt="Yannick, Portrait" class="hero-photo" loading="eager">
+        </div>
+      </div>
     </div>
   </section>
 
@@ -67,9 +79,9 @@
               <div class="about-card-value">Österreich</div>
             </div>
             <div class="about-card reveal">
-              <div class="about-card-icon">💻</div>
-              <div class="about-card-label">Beschäftigung</div>
-              <div class="about-card-value">App-Entwicklung</div>
+              <div class="about-card-icon">🥾</div>
+              <div class="about-card-label">Am liebsten</div>
+              <div class="about-card-value">Draußen in der Natur</div>
             </div>
             <div class="about-card reveal">
               <div class="about-card-icon">🐕</div>
@@ -107,9 +119,9 @@
           <div class="interest-desc">Neue Gadgets, Hardware und alles was Strom braucht.</div>
         </div>
         <div class="interest-card reveal">
-          <div class="interest-icon">📱</div>
-          <div class="interest-title">App-Entwicklung</div>
-          <div class="interest-desc">Ideen in echte Apps verwandeln – am liebsten für iOS.</div>
+          <div class="interest-icon">🌲</div>
+          <div class="interest-title">Natur</div>
+          <div class="interest-desc">Frische Luft, lange Spaziergänge und Ruhe abseits vom Alltag.</div>
         </div>
         <div class="interest-card reveal">
           <div class="interest-icon">🚁</div>
@@ -129,7 +141,7 @@
         <div class="interest-card reveal">
           <div class="interest-icon">🌱</div>
           <div class="interest-title">Neue Projekte</div>
-          <div class="interest-desc">Immer offen für neue Ideen und spannende Kollaborationen.</div>
+          <div class="interest-desc">Immer eine neue Idee im Kopf und Lust, etwas auszuprobieren.</div>
         </div>
       </div>
     </div>
@@ -151,8 +163,16 @@
 
         <!-- Persönlich -->
         <div class="gallery-item" data-category="personal">
+          <img src="assets/ICH_laufen.JPEG" alt="Yannick auf dem Feld im Abendlicht" loading="lazy">
+          <div class="gallery-item-overlay"><span>Goldene Stunde</span></div>
+        </div>
+        <div class="gallery-item" data-category="personal">
           <img src="assets/ICH.JPEG" alt="Dunkles Portrait" loading="lazy">
           <div class="gallery-item-overlay"><span>Portrait</span></div>
+        </div>
+        <div class="gallery-item" data-category="personal">
+          <img src="assets/ICH_schwarz_neu.JPEG" alt="Portrait" loading="lazy">
+          <div class="gallery-item-overlay"><span>Portrait II</span></div>
         </div>
         <div class="gallery-item" data-category="personal">
           <img src="assets/Oskar_und_ich2.JPEG" alt="Yannick und Oskar beim Essen auf der Hütte" loading="lazy">
@@ -309,7 +329,7 @@
             <span class="faq-arrow">↓</span>
           </button>
           <div class="faq-answer">
-            <p>Kaffee. Ohne Kaffee kein Code.</p>
+            <p>Kaffee. Immer. Am liebsten draußen.</p>
           </div>
         </div>
 
@@ -325,11 +345,11 @@
 
         <div class="faq-item reveal">
           <button class="faq-question" aria-expanded="false">
-            App-Idee gehabt und nicht umgesetzt?
+            Lieblingsplatz?
             <span class="faq-arrow">↓</span>
           </button>
           <div class="faq-answer">
-            <p>Ja. Zu viele. Die Notizen-App ist voll.</p>
+            <p>Irgendwo im Grünen, Drohne dabei, Oskar voraus.</p>
           </div>
         </div>
 
@@ -347,6 +367,39 @@
     </div>
   </section>
 
+  <!-- FUN ENDING START ────────────────────��────────────────────────────────────
+       Diese Sektion inkl. Modal durch Entfernen bis "FUN ENDING END" deaktivieren.
+  ──────────────────────────────────────────────────────────────────────────── -->
+  <section class="section fun-ending" id="kaffee">
+    <div class="container">
+      <div class="fun-ending-inner">
+        <p class="section-label reveal">Bevor du gehst …</p>
+        <h2 class="section-title fun-ending-title reveal">Eine letzte Frage.</h2>
+        <p class="fun-ending-sub reveal">Willst du dich mit mir auf einen Kaffee treffen?</p>
+        <div class="fun-ending-btns reveal">
+          <button class="fun-btn fun-btn-yes" id="btnJa">Ja ☕</button>
+          <button class="fun-btn fun-btn-no" id="btnNein" aria-label="Nein">Nein</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="coffee-modal-backdrop" id="coffeeModal" role="dialog" aria-modal="true" aria-labelledby="coffeeModalTitle">
+    <div class="coffee-modal">
+      <button class="coffee-modal-close" id="coffeeModalClose" aria-label="Schließen">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="coffee-modal-emoji" aria-hidden="true">😄</div>
+      <h3 class="coffee-modal-title" id="coffeeModalTitle">Ausgezeichnete Entscheidung.</h3>
+      <p class="coffee-modal-text">Schreib mir einfach auf Instagram.</p>
+      <a class="coffee-modal-btn" href="https://www.instagram.com/yannickreiter/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/></svg>
+        Instagram öffnen
+      </a>
+    </div>
+  </div>
+  <!-- FUN ENDING END ─────────────────────────────────────────────────────── -->
+
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
@@ -362,7 +415,7 @@
             Oskar 🐾
           </a>
         </div>
-        <div class="footer-copy">© 2025 Yannick</div>
+        <div class="footer-copy">© 2026 Yannick</div>
       </div>
     </div>
   </footer>
